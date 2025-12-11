@@ -38,7 +38,7 @@
 <img src="./README/usb.png" width="800">
 
 <p>Elementy można kupuć razem w zestawie dla początkujących lub jako osobne produkty.<p>
-<p>Polecana strona: <a href="https://botland.com.pl">https://botland.com.pl</a></p>
+<p>Polecana strona: <a href="https://botland.com.pl" target="_blank">https://botland.com.pl</a></p>
 
 <a name="Widok"></a>
 ## Widok złożenia
@@ -59,7 +59,7 @@
 <a name="Arduino"></a>
 ## Instalacja środowiska Arduino IDE
 
-<p>Pobieramy Arduino IDE w najnowszej wersji dla naszego systemu operacyjnego oraz instalujemy postępując zgodnie z kreatorem. <a href="https://www.arduino.cc/en/software">Link</a></p>
+<p>Pobieramy Arduino IDE w najnowszej wersji dla naszego systemu operacyjnego oraz instalujemy postępując zgodnie z kreatorem. <a href="https://www.arduino.cc/en/software" target="_blank">Link</a></p>
 
 <a name="ESP-WROOM-32"></a>
 ## Instalujemy sterownik komunikacyjny między: ESP-WROOM-32 oraz naszym komputerem:
@@ -93,6 +93,8 @@
 	</li>
 	
 	<li>Teraz przechodzimy w menu: Tools -> Board [...] -> Boards Manager</li>
+	
+</ol>
 
 <a name="biblioteki"></a>
 ## Instalujemy potrzebne biblioteki:
