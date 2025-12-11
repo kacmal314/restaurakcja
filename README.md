@@ -1,4 +1,14 @@
 
+<style>
+
+	p
+	{
+		text-align: justify;
+	
+	}
+
+
+</style>
 
 1. [ Potrzebne materiały ](#Potrzebne)
 1. [ Widok złożenia ](#Widok)
