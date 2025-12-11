@@ -9,7 +9,7 @@
 1. [ Wgrywanie szkicu do ESP8266 ](#Wgrywanie)
 
 # Projekt wykonywany na zaliczenie przedmiotu: Systemy Internetu Rzeczy.
-> ***Projekt opiera się na technologiach OpenSource, na ich dokumentacjach. Oto linki:***
+> ***Projekt opiera się na technologiach OpenSource, na ich dokumentacjach. Linki do dokumentacji:***
 > * https://laravel.com/docs/12.x
 > * https://docs.arduino.cc/programming
 
