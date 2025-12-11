@@ -74,7 +74,7 @@
 
 <p>04. Obok powinno się znajdować Pole Tekstowe, należy wkleić:</p>
 
-> *** https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json ***
+> ***https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json***
 
 <img src="./README/ide_install_driver.jpg" width="800" />
 
