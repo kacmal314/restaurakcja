@@ -72,10 +72,11 @@
 
 <p>03. Tutaj należy odszukać: Additional Boards Manager URLs</p>
 
-<p>04. Obok powinno się znajdować Pole Tekstowe, należy wkleić:<br />
-<q>https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</q></p>
+<p>04. Obok powinno się znajdować Pole Tekstowe, należy wkleić:</p>
 
-<img src="./README/arduino_install_driver.jpg" width="800" />
+> *** https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json ***
+
+<img src="./README/ide_install_driver.jpg" width="800" />
 
 <p>05. Potwierdzić okno dialogowe</p>
 	
