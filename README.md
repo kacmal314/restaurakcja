@@ -72,19 +72,18 @@
 
 <p>03. Tutaj należy odszukać: Additional Boards Manager URLs</p>
 
-<div>
+<p>04. Obok powinno się znajdować Pole Tekstowe, należy wkleić:<br />
+<q>https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</q></p>
 
-	<p>Obok powinno się znajdować Pole Tekstowe, należy wkleić:</p>
-	
-	<p>https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</p>
-	
-	<img src="./README/arduino_install_driver.jpg" width="800" />
-	
-	<p>Potwierdzić okno dialogowe</p>
-	
-</div>
+<img src="./README/arduino_install_driver.jpg" width="800" />
 
-<p>Teraz przechodzimy w menu: Tools -> Board [...] -> Boards Manager</p>
+<p>05. Potwierdzić okno dialogowe</p>
+	
+<p>06. Teraz przechodzimy w menu: Tools -> Board [...] -> Boards Manager</p>
+
+<p>07. W pasku wyszukiwania wprowadzamy: "esp32"</p>
+
+<p>08. Wybieramy najnowszą wersję oraz klikamy przycisk [Install] i postępujemy zgodnie z kreatorem</p>
 
 <a name="biblioteki"></a>
 ## Instalujemy potrzebne biblioteki:
