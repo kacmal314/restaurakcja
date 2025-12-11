@@ -8,7 +8,7 @@
 1. [ Instalujemy potrzebne biblioteki ](#biblioteki)
 1. [ Wgrywanie szkicu do ESP8266 ](#Wgrywanie)
 
-# Projekt wykonywany na zaliczenie przedmiotu: Systemy Internetu Rzeczy.
+# Projekt wykonany na zaliczenie przedmiotu: Systemy Internetu Rzeczy.
 > ***Projekt opiera się na technologiach OpenSource, na ich dokumentacjach. Linki do dokumentacji:***
 > * https://laravel.com/docs/12.x
 > * https://docs.arduino.cc/programming
@@ -19,10 +19,10 @@
 * Mikrokontroler z modułem WiFi: ESP-WROOM-32
 <img src="./README/esp_wroom_32.png" width="800">
 
-* Płytka Stykowa 830 połączeń (mniej lub więcej ok)
-<img src="./README/breadboard.png" width="800">
+* Płytka Stykowa 830 połączeń (mniej lub więcej: ok)
+<img src="./README/breadboard.png" height="800">
 
-* Wyświetlacz OLED o przekątnej 1.3" (inny wymiar ok)
+* Wyświetlacz OLED o przekątnej 1.3" (inny wymiar: ok)
 <img src="./README/oled.png" width="800">
 
 * Przewody połączeniowe męsko-męskie (naręcze)
@@ -37,8 +37,8 @@
 * Przewód komunikacyjny microUSB między Mikrokontrolerem ESP32 - komputerem
 <img src="./README/usb.png" width="800">
 
-Elementy można kupuć razem w zestawie dla początkujących lub jako osobne produkty.
-Polecana strona: https://botland.com.pl
+<p>Elementy można kupuć razem w zestawie dla początkujących lub jako osobne produkty.<p>
+<p>Polecana strona: <a href="https://botland.com.pl">https://botland.com.pl</a></p>
 
 <a name="Widok"></a>
 ## Widok złożenia
