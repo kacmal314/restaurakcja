@@ -50,6 +50,10 @@
 
 ![Schemat](./README/schemat.png)
 
+![Schemat](./README/schemat_flip.png)
+
+<p>Połączenia na Twojej płytce stykowej (tej białej) mogą się różnić od przedstawionych na schemacie. To normalne i zależy od zakupionego sprzętu. Ważna jest jednak zgodność nazw pinów. W przypadku kontrolera znajdującego się z tyłu wyświetlacza OLED nazwy mogą się różnić, proszę zwrócić uwagę na kolejnośc podłączeń. Nazwy jednak nie powinny się różnić w przypadku Mikrokontrolera ESP32.</p>
+
 <a name="Arduino"></a>
 ## Instalacja środowiska Arduino IDE
 
