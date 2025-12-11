@@ -48,7 +48,7 @@
 <a name="Schemat"></a>
 ## Schemat połączeń
 
-![Schemat](./README/schema.jpg)
+![Schemat](./README/schemat.png)
 
 <a name="Arduino"></a>
 ## Instalacja środowiska Arduino IDE
