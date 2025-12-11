@@ -4,7 +4,7 @@
 1. [ Widok złożenia ](#Widok)
 1. [ Schemat połączeń ](#Schemat)
 1. [ Instalacja środowiska Arduino IDE ](#Arduino)
-1. [ Instalujemy dodatek do obsługi ESP8266 ](#ESP8266)
+1. [ Instalujemy dodatek do obsługi ESP8266 ](#ESP-WROOM-32)
 1. [ Instalujemy potrzebne biblioteki ](#biblioteki)
 1. [ Wgrywanie szkicu do ESP8266 ](#Wgrywanie)
 
@@ -50,32 +50,49 @@
 
 ![Schemat](./README/schemat.png)
 
-![Schemat](./README/schemat_flip.png)
-
 <p>Połączenia na Twojej płytce stykowej (tej białej) mogą się różnić od przedstawionych na schemacie. To normalne i zależy od zakupionego sprzętu. Ważna jest jednak zgodność nazw pinów. W przypadku kontrolera znajdującego się z tyłu wyświetlacza OLED nazwy mogą się różnić, proszę zwrócić uwagę na kolejnośc podłączeń. Nazwy jednak nie powinny się różnić w przypadku Mikrokontrolera ESP32.</p>
+
+![Schemat_flip](./README/schemat_flip.png)
+
+<p>Proszę się przyjrzeć nazwom pinów na płytce ESP32 powiększając zdjęcie</p>
 
 <a name="Arduino"></a>
 ## Instalacja środowiska Arduino IDE
 
-[Pobieramy Arduino IDE z tej lokalizacji](https://www.arduino.cc/en/software)
+<p>Pobieramy Arduino IDE w najnowszej wersji dla naszego systemu operacyjnego oraz instalujemy postępując zgodnie z kreatorem. <a href="https://www.arduino.cc/en/software">Link</a></p>
 
-<a name="ESP8266"></a>
-## Instalujemy dodatek do obsługi ESP8266 w/g tej instrukcji:
+<a name="ESP-WROOM-32"></a>
+## Instalujemy sterownik komunikacyjny między: ESP-WROOM-32 oraz naszym komputerem:
 
-https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/
+<strong>Interfejs programu omawiany zostanie w języku angielskim</strong>
 
-Lub po prostu dodajemy obsługę ESP8266 w Arduino IDE:
+<ol>
 
-Dla MacOS lub Linux **Arduino > Preferencje > Dodatkowe adresy URL do menadżera płytek** 
-
-Dla Windows **Plik > Preferencje > Dodatkowe adresy URL do menadżera płytek** 
-i wklejamy: 
-http://arduino.esp8266.com/stable/package_esp8266com_index.json
-
-Następnie wybieramy **Narządzia > Płytka > Menadżer płytek...**
-W otwartym oknie poszukujemy *__esp8266__* i klikamy **Instaluj**. Zajmie to chwilę. 
-
-![install esp8266 lib](/README.md.fld/image025.png)
+	<li>Otwieramy zainstalowane w poprzednim kroku Arduino IDE</li>
+	
+	<li>Klikamy w menu programu: File -> Preferences</li>
+	
+	<li>Tutaj należy odszukać: Additional Boards Manager URLs</li>
+	
+	<li>
+	
+		<span>Obok powinno się znajdować Pole Tekstowe, należy wkleić:</span>
+		
+		<br />
+		
+		<span>https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</span>
+	
+		<div>
+		
+			<img src="./README/arduino_install_driver.jpg" width="800" />
+		
+		</div>
+		
+		<span>Potwierdzić okno dialogowe</span>
+		
+	</li>
+	
+	<li>Teraz przechodzimy w menu: Tools -> Board [...] -> Boards Manager</li>
 
 <a name="biblioteki"></a>
 ## Instalujemy potrzebne biblioteki:
