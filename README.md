@@ -1,6 +1,7 @@
 
 
 1. [ Potrzebne materiały ](#Potrzebne)
+1. [ Widok złożenia ](#Widok)
 1. [ Schemat połączeń ](#Schemat)
 1. [ Instalacja środowiska Arduino IDE ](#Arduino)
 1. [ Instalujemy dodatek do obsługi ESP8266 ](#ESP8266)
@@ -16,31 +17,38 @@
 ## Potrzebne materiały
 
 * Mikrokontroler z modułem WiFi: ESP-WROOM-32
-<img src="/README.md.fld/esp_wroom_32.png" width="600">
+<img src="./README/esp_wroom_32.png" width="800">
 
-* Termohigrometr ___DHT11___ lub ___DHT22___, 
-<img src="/README.md.fld/image003.jpg" width="600"> 
+* Płytka Stykowa 830 połączeń (mniej lub więcej ok)
+<img src="./README/breadboard.png" width="800">
 
-* Termometr Dallas ___DS18B20___, 
+* Wyświetlacz OLED o przekątnej 1.3" (inny wymiar ok)
+<img src="./README/oled.png" width="800">
 
-<img src="/README.md.fld/image004.jpg"><img src="/README.md.fld/image005.jpg"> 
+* Przewody połączeniowe męsko-męskie (naręcze)
+<img src="./README/przewody.png" width="800">
 
-* Barometr ___BMP180___ lub ___BMP280___, 
+* Przyciski monostabilne (automatycznie odbijają po wciśnięciu) x2
+<img src="./README/przyciski.png" width="800">
 
-<img src="/README.md.fld/image006.jpg"><img src="/README.md.fld/image007.jpg"> 
+* Rezystory 10 kOhm x2
+<img src="./README/resistor.png" width="800">
 
-* Płytka stykowa, 
-<img src="/README.md.fld/image008.jpg"> 
+* Przewód komunikacyjny microUSB między Mikrokontrolerem ESP32 - komputerem
+<img src="./README/usb.png" width="800">
 
-* Kabelki, 
-<img src="/README.md.fld/image010.jpg"> 
+Elementy można kupuć razem w zestawie dla początkujących lub jako osobne produkty.
+Polecana strona: https://botland.com.pl
 
-* Komputer i kabel USB z wtyczką mikro-B (stare do ładowania smartfona) 
+<a name="Widok"></a>
+## Widok złożenia
+
+![Widok](./README/zlozenie.jpg)
 
 <a name="Schemat"></a>
 ## Schemat połączeń
 
-![Schemat](/README.md.fld/image011.png)
+![Schemat](./README/schema.jpg)
 
 <a name="Arduino"></a>
 ## Instalacja środowiska Arduino IDE
