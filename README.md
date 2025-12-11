@@ -66,35 +66,25 @@
 
 <strong>Interfejs programu omawiany zostanie w języku angielskim</strong>
 
-<ol>
+<p>01. Otwieramy zainstalowane w poprzednim kroku Arduino IDE</p>
 
-	<li>Otwieramy zainstalowane w poprzednim kroku Arduino IDE</li>
+<p>02. Klikamy w menu programu: File -> Preferences</p>
+
+<p>03. Tutaj należy odszukać: Additional Boards Manager URLs</p>
+
+<div>
+
+	<p>Obok powinno się znajdować Pole Tekstowe, należy wkleić:</p>
 	
-	<li>Klikamy w menu programu: File -> Preferences</li>
+	<p>https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</p>
 	
-	<li>Tutaj należy odszukać: Additional Boards Manager URLs</li>
+	<img src="./README/arduino_install_driver.jpg" width="800" />
 	
-	<li>
+	<p>Potwierdzić okno dialogowe</p>
 	
-		<span>Obok powinno się znajdować Pole Tekstowe, należy wkleić:</span>
-		
-		<br />
-		
-		<span>https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</span>
-	
-		<div>
-		
-			<img src="./README/arduino_install_driver.jpg" width="800" />
-		
-		</div>
-		
-		<span>Potwierdzić okno dialogowe</span>
-		
-	</li>
-	
-	<li>Teraz przechodzimy w menu: Tools -> Board [...] -> Boards Manager</li>
-	
-</ol>
+</div>
+
+<p>Teraz przechodzimy w menu: Tools -> Board [...] -> Boards Manager</p>
 
 <a name="biblioteki"></a>
 ## Instalujemy potrzebne biblioteki:
