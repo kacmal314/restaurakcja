@@ -65,7 +65,7 @@
 
 <h4>Dodatkowo należy zainstalować sterownik na porty USB naszego komputera</h4>
 
-1. Sterownik pobieramy ze strony <a href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads">silabs.com</a>
+1. Sterownik pobieramy ze strony <a href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads" target="_blank">silabs.com</a>
 
 2. Należy pobrać plik o nazwie: CP210x Universal Windows Driver lub podobnej jeśli wyszła nowsza wersja.
 
@@ -135,7 +135,7 @@ Aktualizować musimy go ręcznie, później pokażę gdzie należy go wkleić.<b
 
 ### Środowisko serwerowe na komputerze lokalnym
 
-1. Pobieramy instalator z: <a href="https://www.apachefriends.org/pl/index.html">https://www.apachefriends.org/pl/index.html</a>
+1. Pobieramy instalator z: <a href="https://www.apachefriends.org/pl/index.html" target="_blank">https://www.apachefriends.org/pl/index.html</a>
 2. Otwieramy instalator i przeklikujemy zachowując ustawienia domyślne.
 3. Odpalamy panel kontrolny wpisując w Menu Start: XAMPP
 4. Klikamy przyciski: Start obok Apache oraz MySQL<br />
