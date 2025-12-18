@@ -101,79 +101,58 @@
 <a name="biblioteki"></a>
 ## Instalujemy inne sterowniki (biblioteki) od osób trzecich
 
-<p>01. Wchodzimy w link</p>
+<p>01. Wchodzimy po kolei w linki poniżej</p>
 <p>02. Należy odnaleźć przycisk do pobierania paczki.zip</p>
 <p>(Na dzień: 18-12-2025) Klikamy zielony przycisk Code -> Download ZIP</p>
-<p>Adafruit GFX: <a href="https://github.com/adafruit/Adafruit-GFX-Library">https://github.com/adafruit/Adafruit-GFX-Library</a></p>
-<p>Adafruit Bus IO: <a href="https://github.com/adafruit/Adafruit_BusIO">https://github.com/adafruit/Adafruit_BusIO</a></p>
-<p>ESP32 sh1106 OLED: <a href="https://github.com/nhatuan84/esp32-sh1106-oled">https://github.com/nhatuan84/esp32-sh1106-oled</a></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>Adafruit GFX: <a target="_blank" href="https://github.com/adafruit/Adafruit-GFX-Library">https://github.com/adafruit/Adafruit-GFX-Library</a></p>
+<p>Adafruit Bus IO: <a target="_blank" href="https://github.com/adafruit/Adafruit_BusIO">https://github.com/adafruit/Adafruit_BusIO</a></p>
+<p>ESP32 sh1106 OLED: <a target="_blank" href="https://github.com/nhatuan84/esp32-sh1106-oled">https://github.com/nhatuan84/esp32-sh1106-oled</a></p>
+<p>03. Po pobraniu otwieramy Arduino IDE</p>
+<p>04. Klikamy w menu: Sketch -> Include Library -> Add .ZIP Library</p>
+<p>05. Teraz należy odszukać pobrane bibliotki na komputerze</p>
+<p>06. Powtarzamy od kroku 04. dla każdej biblioteki</p>
 
 <a name="Wgrywanie"></a>
 ## Wgrywanie szkicu do ESP8266
 
-### Sterowniki do konwerterów _USB <-> serial (port szeregowy)_
-Układ ESP8266 (inne mikrokontrolery podobnie) Posiadają jedynie port szeregowy (RS232). Wgrywanie oprogramowania wymaga przykładowo takiego [specjalnego programatora](https://botland.com.pl/pl/programatory/4481-programatordebugger-stm8stm32-zgodny-z-st-linkv2-mini-waveshare-10053.html?search_query=programator&results=30). Płytki takie jak _NodeMCU_, czy _WemosD1 mini_ posiadają wbudowany konwerter portu szeregowego. Przważnie jest to układ CP210x (NodeMCU v1, v2, WemosD1 mini pro)  
+<p>Przed wykorzystaniem Arduino IDE należy fizycznie podłączyć Mikrokontroler ESP32.</p>
+<p>Wykorzystujemy przewód microUSB. Po podłączniu powinna zapalić się dioda LED (przykładowo: czerwona)</p>
+<p><strong>Proszę nie dotykać elektroniki w celu uniknięcia zwarcia, chyba że w celu rozłączenia przewodu.</strong></p>
 
-![CP2102](/README.md.fld/image027.png) 
-  
+### Ustawienie Arduino IDE ###
 
-i CH340 (WemosD1 mini, NodeMCU v3).  
-  
-  
-![CH340](/README.md.fld/image026.png)  
+1. Model płytki z ESP32
+Klikamy w menu: Tools -> Boards -> ESP32 Arduino -> ESP32 Dev Module
+1. Port szeregowy komunikacyjny, z komputera do mikrokontrolera
+Klikamy w menu: Tools -> Port -> COMX (gdzie X jest zależne od naszego komputera, u mnie: "COM3")
 
-Przed podłączeniem płytki do komputera należy zainstalować sterowniki do tego układu.  
-[Sterowniki do _CP210x_ i instrukcje jak je zainstalować można znaleźć tutaj](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)  
+### Teraz należy przygotować plik z programem (tzw. szkic)
 
-[Sterowniki do _CH340_ i instrukcje jak je zainstalować można znaleźć tutaj](https://sparks.gogo.co.nz/ch340.html) 
+1. Szkic pobieramy na komputer, znajduje się na ___githubie ***restaurakcja.ino***
 
->Uwaga *Tylko MacOS* po wgraniu sterownika należy go włączyć w **Preferencje systemowe > Ochrona i prywatność**. [Opis zamieszczono tutaj](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver.git)
+2. Otwieramy plik przez menu: File -> Open, odszukujemy pobrany szkic
 
-### Przed wgraniem szkicu do mikrokontrolera (NodeMCU, WemosD1, i in.) należy ustawić w Arduino IDE *dwie ważne rzeczy*:
-1. Model płytki z mikrokontrolerem
-![openfile](/README.md.fld/image024.png) 
-1. Port szeregowy do komunikacji ___komputer <-> płytka___
-Przed podłączeniem płytki do komputera wybieramy *__Narzędzia > Port__*. W ten sposób możemy wykryć, na którym porcie pojawi się nasza płytka. 
-![openfile](/README.md.fld/image022.png) 
-Teraz podpinamy płytkę i ponownie wybieramy *__Narzędzia > Port__*
-![openfile](/README.md.fld/image023.png) 
+3. Należy odszukać w kodzie i zaktualizować podane niżej linijki
 
-> UWAGA: W systemie Windows porty te będą widoczne inaczej jako **COM2, COM3** itd.
-### Teraz możemy przystąpić do wgrywania szkicu, czyli piku _.ino_ do płytki 
-
-1. Gotowy szkic należy pobrać z ___githuba___ **stacjaMeteo_bmp180.ino** lub **stacjaMeteo_bmp280.ino** 
-
-1. Pobrany plik wgrywamy do katalogu **Dokumenty &gt; Arduino &gt; stacjaMeteo_bmp180** lub **Dokumenty &gt; Arduino &gt; stacjaMeteo_bmp280**
-Otwieramy wybrany plik w Arduino IDE: ![openfile](/README.md.fld/image016.png) 
-
-1. klikamy ![openfile2](/README.md.fld/image015.png) 
-
-1. Zmieniamy ustawienia sieci Wi-Fi na własne
-![openfile](/README.md.fld/image017.png)
 ```C++
-// Zastąp danymi własnej sieci wi-fi
-const char* ssid = "NAZWA_SIECI_WIFI";
-const char* password = "HASŁO_SIECI_WIFI";
-``` 
-5. Sprawdzamy czy nie ma błędów w składni: ![openfile](/README.md.fld/image018.png) 
+#define MY_SSID "[nazwa naszej sieci wifi]";
+#define MY_PASSWD "[hasło naszej sieci wifi]";
+#define MY_SRV "https://localhost/restaurakcja"
+#define MY_AUTH_SRV "https://default:phplaravel@localhost/restaurakcja"
 
-1. Jeśli wszystko poszło dobrze można wgrać program: ![openfile](/README.md.fld/image019.png) 
+const char *ssid = MY_SSID;
+const char *password = MY_PASSWD;
+const char *server = MY_SRV;
+const char *auth_server = MY_SRV;
+const char *apiToken = "[to wypełniamy wygenerowanym TOKENEM DOSTĘPU]";
+```
 
-> Jeśli pojawiły się błędy kompilacji (z kroku 5), to najprawdopodobniej nie wszystkie wymagane biblioteki zostały zainstalowane. 
-Należy się upewnić czy jakaś inna bibliotekanie nie powoduje konfliktów. Jeśli samodzielnie edytowałeś szkic to może pojawił się błąd składni. Sprawdź opis błędy (na czerwono) w czarnym okienku na dole Arduino IDE. Najczęściej zapominamy o *__„;”__* na końcu linii bądź polecenia.
+4. Klikamy przycisk Verify (teraz nastąpi kompilacja), proszę poczekać kilka-kilkanaście minut
 
-<font color:red >POWODZENIA!!!</font>
+<p>Przycisk Verify powinien znajdować się w Arduino IDE: pod menu, na wstążce</p>
+
+### Wgrywamy program do mikrokontrolera
+
+<p>Klikamy przycisk Upload: znajdujący się na wstążce</p>
+
+<p>Niedługo powinniśmy napis: "Connecting..." na płytce ESP32 :)</p>
