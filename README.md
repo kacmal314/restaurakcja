@@ -159,18 +159,18 @@ lub inną w zależności od procesu instalacyjnego (powinna kończyć się na "\
 <img src="./README/environment.jpg" />
 
 8. Wklejamy jeszcze jedną ścieżkę: C:\xampp\mysql\bin
-9. Na końcu wszystkie okna można zaakceptować i zamknąć
+9. Na końcu wszystkie okna można zaakceptować i zakończyć
 <p><strong>Teraz proszę zamknąć (jeśli jest otwarty) i otworzyć terminal (Ctrl + R: cmd.exe)</strong></p>
 
 <a name="Aplikacja"></a>
 ## Aplikacja internetowa do dodawania zadań
 
 Aplikacja będzie dostępna przez przeglądarkę internetową. W pasku url należy wpisać: localhost/restaurakcja<br />
-W odpowiednim momencie pojawi się okno logowania.
+W odpowiednim momencie skorzystamy z okna logowania.
 
 ### Tworzenie bazy danych
 
-<p>Zanim będziemy mogli pracować w aplikacji musimy stworzyć miejsce gdzie będzie przechowywać dane.</p>
+<p>Zanim będziemy mogli pracować w aplikacji musimy stworzyć miejsce gdzie będziemy przechowywać dane.</p>
 
 1. Otwieramy terminal i wklejamy: mysql -u root -p
 2. Klikamy enter podając puste hasło
@@ -197,7 +197,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 
 ```
-4. Otwieramy XAMPPa wyłączamy i włączamy serwer Apache przyciskiem Stop/Start
+4. Otwieramy XAMPPa -> wyłączamy i włączamy serwer Apache przyciskiem Stop/Start
 5. Otwieramy terminal i przechodzimy do folderu z projektem: cd C:\xampp\htdocs\restaurakcja<br />
 Lokalizacja może się różnić w zależności od miejsca instalacji programu XAMPP.
 6. Wklejamy: php artisan key:generate
@@ -224,8 +224,7 @@ Lokalizacja może się różnić w zależności od miejsca instalacji programu X
 
 1. Model płytki z ESP32
 Klikamy w menu: Tools -> Boards -> ESP32 Arduino -> ESP32 Dev Module
-2. Port szeregowy komunikacyjny, z komputera do mikrokontrolera
-Klikamy w menu: Tools -> Port -> COMX (gdzie X jest zależne od naszego komputera, u mnie: "COM3")
+2. Port szeregowy komunikacyjny, z komputera do mikrokontrolera ustawiamy klikając w menu: Tools -> Port -> COMX (gdzie X jest zależne od naszego komputera, u mnie: "COM3")
 
 ### Teraz należy przygotować plik z programem (tzw. szkic)
 
@@ -256,4 +255,4 @@ const char *apiToken = "[to wypełniamy wygenerowanym TOKENEM DOSTĘPU]";
 
 <p>Klikamy przycisk Upload: znajdujący się na wstążce</p>
 
-<p>Niedługo powinniśmy napis: "Connecting..." na płytce ESP32 :)</p>
+<p>Niedługo powinniśmy ujrzeć napis: "Connecting..." na wyświetlaczu OLED obok płytki ESP32 :)</p>
