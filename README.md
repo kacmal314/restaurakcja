@@ -101,7 +101,12 @@
 <a name="biblioteki"></a>
 ## Instalujemy inne sterowniki (biblioteki) od osób trzecich
 
-
+<p>01. Wchodzimy w link</p>
+<p>02. Należy odnaleźć przycisk do pobierania paczki.zip</p>
+<p>(Na dzień: 18-12-2025) Klikamy zielony przycisk Code -> Download ZIP</p>
+<p>Adafruit GFX: <a href="https://github.com/adafruit/Adafruit-GFX-Library">https://github.com/adafruit/Adafruit-GFX-Library</a></p>
+<p>Adafruit Bus IO: <a href="https://github.com/adafruit/Adafruit_BusIO">https://github.com/adafruit/Adafruit_BusIO</a></p>
+<p>ESP32 sh1106 OLED: <a href="https://github.com/nhatuan84/esp32-sh1106-oled">https://github.com/nhatuan84/esp32-sh1106-oled</a></p>
 
 
 
