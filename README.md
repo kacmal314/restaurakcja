@@ -6,6 +6,8 @@
 1. [ Instalacja środowiska Arduino IDE ](#Arduino)
 1. [ Instalujemy sterownik komunikacyjny ](#ESP-WROOM-32)
 1. [ Instalujemy inne sterowniki ](#biblioteki)
+1. [ Instalacja serwerów lokalnych ](#Serwery)
+1. [ Aplikacja internetowa ](#Aplikacja)
 1. [ Wgrywanie szkicu do ESP8266 ](#Wgrywanie)
 
 # Projekt wykonany na zaliczenie przedmiotu: Systemy Internetu Rzeczy.
@@ -112,6 +114,69 @@ ESP32 sh1106 OLED: <a target="_blank" href="https://github.com/nhatuan84/esp32-s
 5. Teraz należy odszukać pobrane bibliotki na komputerze
 6. Powtarzamy od kroku 4. dla każdej biblioteki
 
+<a name="Serwery"></a>
+## Instalacja serwerów lokalnych HTTP oraz SQL
+
+Serwer lokalny HTTP służy do obsługi mikrokontrolera ESP32.
+Serwer lokalny SQL służy do przechowywania danych naszej aplikacji (stworzymy ją później).
+
+### Podgląd adresu IP w naszej sieci wifi
+
+1. Otwieramy terminal (Windows: Win + R: cmd.exe)
+2. Wklejamy: ipconfig
+3. Odszukujemy wpis: Wireless LAN adapter Wi-Fi
+4. Odszukujemy podwpis: IPv4 Address<br />
+Tutaj znajduje się adres IP naszego komputera. U mnie przykładowo jest: 10.8.31.169<br />
+Nasz komputer jest serwerem w sieci wifi. Ten adres IP będzie nam później bardzo potrzebny.<br />
+Niestety adres IP może się deaktualizować, ważne żeby każdorazowo uruchamiając projekt adres ten był poprawny.<br>
+Aktualizować musimy go ręcznie, później pokażę gdzie należy go wkleić.<br />
+
+<img src="./README/terminal.jpg" width="800" />
+
+### Środowisko serwerowe na komputerze lokalnym
+
+1. Pobieramy instalator z: <a href="https://www.apachefriends.org/pl/index.html">https://www.apachefriends.org/pl/index.html</a>
+2. Otwieramy instalator i przeklikujemy zachowując ustawienia domyślne.
+3. Odpalamy panel kontrolny wpisując w Menu Start: XAMPP
+4. Klikamy przyciski: Start obok Apache oraz MySQL<br />
+Jeśli instalacja przebiegła pomyślnie to nazwy serwerów powinny wyświetlać się z zielonym tłem.<br />
+
+<img src="./README/xampp.png" />
+
+5. Klikamy przyciski Explorer, powinien otworzyć się folder o nazwie "htdocs"
+
+<p>Teraz chcemy dodać folder z interpreterem języka PHP do zmiennej środowiskowej</p>
+
+1. Otwieramy Menu Start
+2. Wklejamy: View advanced system settings
+3. Otwieramy zakładkę: Advanced -> Environment Variables
+4. Szukamy: "System variables" i wybieramy Path
+5. Klikamy przycisk Edit
+6. Klikamy przycisk New
+7. Wklejamy ścieżkę: C:\xampp\php<br />
+lub inną w zależności od procesu instalacyjnego (powinna kończyć się na "\php")
+
+<img src="./README/environment.jpg" />
+
+8. Na końcu wszystkie okna można zaakceptować i zamknąć
+9. Teraz proszę zamknąć jeśli jest otwarty i uruchomić ponownie terminal (Ctrl + R: cmd.exe)
+
+<a name="Aplikacja"></a>
+## Aplikacja internetowa do dodawania zadań
+
+Aplikacja będzie dostępna przez przeglądarkę internetową.<br />
+W pasku url należy wpisać localhost/restaurakcja<br />
+W odpowiednim momencie pojawi się okno logowania
+
+### Instalacja aplikacji
+
+php artisan migrate:fresh --seed
+
+### Generowanie klucza API
+
+<p>Klucz API to ciąg znaków, który należy skopiować i wkleić w dalszej części tutoriala</p>
+<p>Podobnie jak ma to miejsce z adresem IP naszego komputera, na którym zainstalowane są serwery</p>
+
 <a name="Wgrywanie"></a>
 ## Wgrywanie szkicu do ESP32
 
@@ -119,7 +184,7 @@ ESP32 sh1106 OLED: <a target="_blank" href="https://github.com/nhatuan84/esp32-s
 <p>Wykorzystujemy przewód microUSB. Po podłączniu powinna zapalić się dioda LED (przykładowo: czerwona)</p>
 <p><strong>Proszę nie dotykać elektroniki w celu uniknięcia zwarcia, chyba że odłączamy przewód.</strong></p>
 
-### Ustawienie Arduino IDE ###
+### Ustawienie Arduino IDE
 
 1. Model płytki z ESP32
 Klikamy w menu: Tools -> Boards -> ESP32 Arduino -> ESP32 Dev Module
@@ -137,8 +202,8 @@ Klikamy w menu: Tools -> Port -> COMX (gdzie X jest zależne od naszego komputer
 ```C++
 #define MY_SSID "[nazwa naszej sieci wifi]";
 #define MY_PASSWD "[hasło naszej sieci wifi]";
-#define MY_SRV "https://localhost/restaurakcja"
-#define MY_AUTH_SRV "https://default:phplaravel@localhost/restaurakcja"
+#define MY_SRV "https://[IP NASZEGO KOMPUTERA]/restaurakcja"
+#define MY_AUTH_SRV "" // to można zostawić puste
 
 const char *ssid = MY_SSID;
 const char *password = MY_PASSWD;
