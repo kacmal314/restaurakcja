@@ -102,11 +102,11 @@
 ## Instalujemy inne sterowniki (biblioteki) od osób trzecich
 
 1. Wchodzimy po kolei w linki poniżej
-2. Należy odnaleźć przycisk do pobierania paczki.zip
-<p>(Na dzień: 18-12-2025) Klikamy zielony przycisk Code -> Download ZIP</p>
-<p>Adafruit GFX: <a target="_blank" href="https://github.com/adafruit/Adafruit-GFX-Library">https://github.com/adafruit/Adafruit-GFX-Library</a></p>
-<p>Adafruit Bus IO: <a target="_blank" href="https://github.com/adafruit/Adafruit_BusIO">https://github.com/adafruit/Adafruit_BusIO</a></p>
-<p>ESP32 sh1106 OLED: <a target="_blank" href="https://github.com/nhatuan84/esp32-sh1106-oled">https://github.com/nhatuan84/esp32-sh1106-oled</a></p>
+2. Należy odnaleźć przycisk do pobierania paczki.zip<br />
+(Na dzień: 18-12-2025) Klikamy zielony przycisk Code -> Download ZIP<br />
+Adafruit GFX: <a target="_blank" href="https://github.com/adafruit/Adafruit-GFX-Library">https://github.com/adafruit/Adafruit-GFX-Library</a><br />
+Adafruit Bus IO: <a target="_blank" href="https://github.com/adafruit/Adafruit_BusIO">https://github.com/adafruit/Adafruit_BusIO</a><br />
+ESP32 sh1106 OLED: <a target="_blank" href="https://github.com/nhatuan84/esp32-sh1106-oled">https://github.com/nhatuan84/esp32-sh1106-oled</a>
 3. Po pobraniu otwieramy Arduino IDE
 4. Klikamy w menu: Sketch -> Include Library -> Add .ZIP Library
 5. Teraz należy odszukać pobrane bibliotki na komputerze
