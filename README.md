@@ -113,11 +113,11 @@
 <p>06. Powtarzamy od kroku 04. dla każdej biblioteki</p>
 
 <a name="Wgrywanie"></a>
-## Wgrywanie szkicu do ESP8266
+## Wgrywanie szkicu do ESP32
 
 <p>Przed wykorzystaniem Arduino IDE należy fizycznie podłączyć Mikrokontroler ESP32.</p>
 <p>Wykorzystujemy przewód microUSB. Po podłączniu powinna zapalić się dioda LED (przykładowo: czerwona)</p>
-<p><strong>Proszę nie dotykać elektroniki w celu uniknięcia zwarcia, chyba że w celu rozłączenia przewodu.</strong></p>
+<p><strong>Proszę nie dotykać elektroniki w celu uniknięcia zwarcia, chyba że odłączamy przewód.</strong></p>
 
 ### Ustawienie Arduino IDE ###
 
@@ -128,7 +128,7 @@ Klikamy w menu: Tools -> Port -> COMX (gdzie X jest zależne od naszego komputer
 
 ### Teraz należy przygotować plik z programem (tzw. szkic)
 
-1. Szkic pobieramy na komputer, znajduje się na ___githubie ***restaurakcja.ino***
+1. Szkic pobieramy na komputer, znajduje się na ___githubie ***restaurakcja.ino***___
 
 2. Otwieramy plik przez menu: File -> Open, odszukujemy pobrany szkic
 
