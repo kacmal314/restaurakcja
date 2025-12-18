@@ -145,7 +145,7 @@ Jeśli instalacja przebiegła pomyślnie to nazwy serwerów powinny wyświetlać
 
 5. Klikamy przyciski Explorer, powinien otworzyć się folder o nazwie "htdocs"
 
-<p>Teraz chcemy dodać folder z interpreterem języka PHP do zmiennej środowiskowej</p>
+<p><strong>Teraz należy dodać folder z programami pomocniczymi do zmiennej środowiskowej</strong></p>
 
 1. Otwieramy Menu Start
 2. Wklejamy: View advanced system settings
@@ -158,24 +158,60 @@ lub inną w zależności od procesu instalacyjnego (powinna kończyć się na "\
 
 <img src="./README/environment.jpg" />
 
-8. Na końcu wszystkie okna można zaakceptować i zamknąć
-9. Teraz proszę zamknąć jeśli jest otwarty i uruchomić ponownie terminal (Ctrl + R: cmd.exe)
+8. Wklejamy jeszcze jedną ścieżkę: C:\xampp\mysql\bin
+9. Na końcu wszystkie okna można zaakceptować i zamknąć
+<p><strong>Teraz proszę zamknąć (jeśli jest otwarty) i otworzyć terminal (Ctrl + R: cmd.exe)</strong></p>
 
 <a name="Aplikacja"></a>
 ## Aplikacja internetowa do dodawania zadań
 
-Aplikacja będzie dostępna przez przeglądarkę internetową.<br />
-W pasku url należy wpisać localhost/restaurakcja<br />
-W odpowiednim momencie pojawi się okno logowania
+Aplikacja będzie dostępna przez przeglądarkę internetową. W pasku url należy wpisać: localhost/restaurakcja<br />
+W odpowiednim momencie pojawi się okno logowania.
+
+### Tworzenie bazy danych
+
+<p>Zanim będziemy mogli pracować w aplikacji musimy stworzyć miejsce gdzie będzie przechowywać dane.</p>
+
+1. Otwieramy terminal i wklejamy: mysql -u root -p
+2. Klikamy enter podając puste hasło
+3. Wklejamy: create database restaurakcja character set utf8mb4;
+4. Zatwierdzamy enter-em
+5. Wpisujemy żeby zamknąć klienta MySQL: \q
 
 ### Instalacja aplikacji
 
-php artisan migrate:fresh --seed
+1. Pobieramy wszystkie pliki aplikacji na komputer, znajdują się na ___githubie ***/restaurakcja***___
+2. Otwieramy folder o nazwie "htdocs" z wcześniej.
+3. Przenosimy do niego wszystkie pliki tak żeby tworzyły strukturę: /htdocs/restaurakcja/[tutaj będzie folder /app i inne]
+4. Kopiujemy plik do tego samego folderu: /restaurakcja/.env.example
+5. Zmieniamy nazwę na .env
+6. Edytujemy wyszukując linijki (można wykorzystać narzędzie do wyszukiwania po frazach: Ctrl + F w notatniku)<br />
+```.env
+APP_NAME=Restaurakcja
+APP_URL=http://localhost/restaurakcja
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=restaurakcja
+DB_USERNAME=root
+DB_PASSWORD=
+
+```
+4. Otwieramy XAMPPa wyłączamy i włączamy serwer Apache przyciskiem Stop/Start
+5. Otwieramy terminal i przechodzimy do folderu z projektem: cd C:\xampp\htdocs\restaurakcja<br />
+Lokalizacja może się różnić w zależności od miejsca instalacji programu XAMPP.
+6. Wklejamy: php artisan key:generate
+7. Teraz jeszcze: php artisan migrate:fresh --seed
 
 ### Generowanie klucza API
 
 <p>Klucz API to ciąg znaków, który należy skopiować i wkleić w dalszej części tutoriala</p>
 <p>Podobnie jak ma to miejsce z adresem IP naszego komputera, na którym zainstalowane są serwery</p>
+
+1. Wklejamy w przeglądarce w pasku url: localhost/restaurakcja
+2. Logujemy się podając poświadczenia: default/phpartisan
+3. Wklejamy w przeglądarce: localhost/restaurakcja/taskapi/create
+4. Zapisujemy na kartce papieru TOKEN DOSTĘPU, będzie potrzebny później
 
 <a name="Wgrywanie"></a>
 ## Wgrywanie szkicu do ESP32
