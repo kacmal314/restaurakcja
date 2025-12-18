@@ -1,21 +1,11 @@
 
-<style>
-
-	p
-	{
-		text-align: justify;
-	
-	}
-
-
-</style>
 
 1. [ Potrzebne materiały ](#Potrzebne)
 1. [ Widok złożenia ](#Widok)
 1. [ Schemat połączeń ](#Schemat)
 1. [ Instalacja środowiska Arduino IDE ](#Arduino)
-1. [ Instalujemy dodatek do obsługi ESP8266 ](#ESP-WROOM-32)
-1. [ Instalujemy potrzebne biblioteki ](#biblioteki)
+1. [ Instalujemy sterownik komunikacyjny ](#ESP-WROOM-32)
+1. [ Instalujemy inne sterowniki ](#biblioteki)
 1. [ Wgrywanie szkicu do ESP8266 ](#Wgrywanie)
 
 # Projekt wykonany na zaliczenie przedmiotu: Systemy Internetu Rzeczy.
@@ -69,10 +59,22 @@
 <a name="Arduino"></a>
 ## Instalacja środowiska Arduino IDE
 
-<p>Pobieramy Arduino IDE w najnowszej wersji dla naszego systemu operacyjnego oraz instalujemy postępując zgodnie z kreatorem. <a href="https://www.arduino.cc/en/software" target="_blank">Link</a></p>
+<p align="justify">Pobieramy Arduino IDE w najnowszej wersji dla naszego systemu operacyjnego oraz instalujemy postępując zgodnie z kreatorem. <a href="https://www.arduino.cc/en/software" target="_blank">Link</a></p>
+
+<h4>Dodatkowo należy zainstalować sterownik na porty USB naszego komputera</h4>
+
+<p>01. Sterownik pobieramy ze strony <a href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads">silabs.com</a></p>
+
+<p>02. Należy pobrać plik o nazwie: CP210x Universal Windows Driver lub podobnej jeśli wyszła nowsza wersja.</p>
+
+<p>03. Teraz należy rozpakować plik.zip</p>
+
+<p>04. W rozpakowanej strukturze znajdziemy instalator: silabser.inf</p>
+
+<p>05. Klikamy na niego PPM -> Install. Proszę postępować zgodnie z instrukcjami kreatora.</p>
 
 <a name="ESP-WROOM-32"></a>
-## Instalujemy sterownik komunikacyjny między: ESP-WROOM-32 oraz naszym komputerem:
+## Instalujemy sterownik komunikacyjny między: ESP-WROOM-32 oraz naszym komputerem
 
 <strong>Interfejs programu omawiany zostanie w języku angielskim</strong>
 
@@ -97,40 +99,23 @@
 <p>08. Wybieramy najnowszą wersję oraz klikamy przycisk [Install] i postępujemy zgodnie z kreatorem</p>
 
 <a name="biblioteki"></a>
-## Instalujemy potrzebne biblioteki:
+## Instalujemy inne sterowniki (biblioteki) od osób trzecich
 
-* #### DHT:
-W programie Arduino IDE klikamy kolejno **Szkic > Dołącz bibliotekę &gt; Zarządzaj bibliotekami…**. W oknie wyszukiwania wpisujemy ___DHT___
 
-![install DHT lib](/README.md.fld/image012.png)
 
-* #### Podobnie instalujemy bibliotekę: "Adafruit Unified Sensor”
 
-![install "Adafruit Unified Sensor" lib](/README.md.fld/image021.png)
 
-* #### Podobnie instalujemy bibliotekę: ___onewire___ zwracając uwagę na właściwe pochodzenie, gdyż w zasobach jest dużo bibliotek o podobnych nazwach i przeznaczeniu
 
-![install onewire lib](/README.md.fld/image013.png)
 
-* #### Oraz DS18B20:
 
-![install DS18B20 lib](/README.md.fld/image014.png)
 
-* #### Kolejna biblioteka konieczna do utworzenia miniserwera www na ESP8266: "ESPAsyncWebServer" do zainstalowania. 
 
-[Pobieramy ją z tej lokalizacji.](https://github.com/me-no-dev/ESPAsyncWebServer/archive/master.zip)
 
-Pobrany plik należy rozpakować i zmienić nazwę na "ESPAsyncWebServer". Folder ten przenieść do **Moje dokumenty &gt; Arduino &gt; libraries**
 
-* #### Powyższe kroki powtarzamy z biblioteką [ESPAsyncTCP](https://github.com/me-no-dev/ESPAsyncTCP/archive/master.zip)
 
-* #### Kolejna biblioteka dla [barometru](https://circuits4you.com/wp-content/uploads/2019/03/BMP180_Breakout_Arduino_Library-master.zip) BMP180 do pobrania.
 
-Instalujemy podobnie jak poprzednie. Można też wybrać: **Szkic &gt; Dołącz bibliotekę &gt; Dodaj Bibliotekę .ZIP…**
 
-> Jeśli czujnikiem ciśnienia jest ___BMP280___ również należy zainstalować bibliotekę ("adafruit bme280") do obsługi tego czujnika.
 
-![install DS18B20 lib](/README.md.fld/image020.png)
 
 <a name="Wgrywanie"></a>
 ## Wgrywanie szkicu do ESP8266
