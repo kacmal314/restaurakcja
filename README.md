@@ -63,54 +63,54 @@
 
 <h4>Dodatkowo należy zainstalować sterownik na porty USB naszego komputera</h4>
 
-<p>01. Sterownik pobieramy ze strony <a href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads">silabs.com</a></p>
+1. Sterownik pobieramy ze strony <a href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads">silabs.com</a>
 
-<p>02. Należy pobrać plik o nazwie: CP210x Universal Windows Driver lub podobnej jeśli wyszła nowsza wersja.</p>
+2. Należy pobrać plik o nazwie: CP210x Universal Windows Driver lub podobnej jeśli wyszła nowsza wersja.
 
-<p>03. Teraz należy rozpakować plik.zip</p>
+3. Teraz należy rozpakować plik.zip
 
-<p>04. W rozpakowanej strukturze znajdziemy instalator: silabser.inf</p>
+4. W rozpakowanej strukturze znajdziemy instalator: silabser.inf
 
-<p>05. Klikamy na niego PPM -> Install. Proszę postępować zgodnie z instrukcjami kreatora.</p>
+5. Klikamy na niego PPM -> Install. Proszę postępować zgodnie z instrukcjami kreatora.
 
 <a name="ESP-WROOM-32"></a>
 ## Instalujemy sterownik komunikacyjny między: ESP-WROOM-32 oraz naszym komputerem
 
 <strong>Interfejs programu omawiany zostanie w języku angielskim</strong>
 
-<p>01. Otwieramy zainstalowane w poprzednim kroku Arduino IDE</p>
+1. Otwieramy zainstalowane w poprzednim kroku Arduino IDE
 
-<p>02. Klikamy w menu programu: File -> Preferences</p>
+2. Klikamy w menu programu: File -> Preferences
 
-<p>03. Tutaj należy odszukać: Additional Boards Manager URLs</p>
+3. Tutaj należy odszukać: Additional Boards Manager URLs
 
-<p>04. Obok powinno się znajdować Pole Tekstowe, należy wkleić:</p>
+4. Obok powinno się znajdować Pole Tekstowe, należy wkleić:
 
 > ***https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json***
 
 <img src="./README/ide_install_driver.jpg" width="800" />
 
-<p>05. Potwierdzić okno dialogowe</p>
+5. Potwierdzić okno dialogowe
 	
-<p>06. Teraz przechodzimy w menu: Tools -> Board [...] -> Boards Manager</p>
+6. Teraz przechodzimy w menu: Tools -> Board [...] -> Boards Manager
 
-<p>07. W pasku wyszukiwania wprowadzamy: "esp32"</p>
+7. W pasku wyszukiwania wprowadzamy: "esp32"
 
-<p>08. Wybieramy najnowszą wersję oraz klikamy przycisk [Install] i postępujemy zgodnie z kreatorem</p>
+8. Wybieramy najnowszą wersję oraz klikamy przycisk [Install] i postępujemy zgodnie z kreatorem
 
 <a name="biblioteki"></a>
 ## Instalujemy inne sterowniki (biblioteki) od osób trzecich
 
-<p>01. Wchodzimy po kolei w linki poniżej</p>
-<p>02. Należy odnaleźć przycisk do pobierania paczki.zip</p>
+1. Wchodzimy po kolei w linki poniżej
+2. Należy odnaleźć przycisk do pobierania paczki.zip
 <p>(Na dzień: 18-12-2025) Klikamy zielony przycisk Code -> Download ZIP</p>
 <p>Adafruit GFX: <a target="_blank" href="https://github.com/adafruit/Adafruit-GFX-Library">https://github.com/adafruit/Adafruit-GFX-Library</a></p>
 <p>Adafruit Bus IO: <a target="_blank" href="https://github.com/adafruit/Adafruit_BusIO">https://github.com/adafruit/Adafruit_BusIO</a></p>
 <p>ESP32 sh1106 OLED: <a target="_blank" href="https://github.com/nhatuan84/esp32-sh1106-oled">https://github.com/nhatuan84/esp32-sh1106-oled</a></p>
-<p>03. Po pobraniu otwieramy Arduino IDE</p>
-<p>04. Klikamy w menu: Sketch -> Include Library -> Add .ZIP Library</p>
-<p>05. Teraz należy odszukać pobrane bibliotki na komputerze</p>
-<p>06. Powtarzamy od kroku 04. dla każdej biblioteki</p>
+3. Po pobraniu otwieramy Arduino IDE
+4. Klikamy w menu: Sketch -> Include Library -> Add .ZIP Library
+5. Teraz należy odszukać pobrane bibliotki na komputerze
+6. Powtarzamy od kroku 4. dla każdej biblioteki
 
 <a name="Wgrywanie"></a>
 ## Wgrywanie szkicu do ESP32
@@ -123,7 +123,7 @@
 
 1. Model płytki z ESP32
 Klikamy w menu: Tools -> Boards -> ESP32 Arduino -> ESP32 Dev Module
-1. Port szeregowy komunikacyjny, z komputera do mikrokontrolera
+2. Port szeregowy komunikacyjny, z komputera do mikrokontrolera
 Klikamy w menu: Tools -> Port -> COMX (gdzie X jest zależne od naszego komputera, u mnie: "COM3")
 
 ### Teraz należy przygotować plik z programem (tzw. szkic)
