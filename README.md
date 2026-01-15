@@ -39,7 +39,7 @@
 * Przewód komunikacyjny microUSB między Mikrokontrolerem ESP32 - komputerem
 <img src="./README/usb.png" width="800">
 
-<p>Elementy można kupuć razem w zestawie dla początkujących lub jako osobne produkty.<p>
+<p>Elementy można kupić razem w zestawie dla początkujących lub jako osobne produkty.<p>
 <p>Polecana strona: <a href="https://botland.com.pl" target="_blank">https://botland.com.pl</a></p>
 
 <a name="Widok"></a>
@@ -52,7 +52,7 @@
 
 ![Schemat](./README/schemat.png)
 
-<p>Połączenia na Twojej płytce stykowej (tej białej) mogą się różnić od przedstawionych na schemacie. To normalne i zależy od zakupionego sprzętu. Ważna jest jednak zgodność nazw pinów. W przypadku kontrolera znajdującego się z tyłu wyświetlacza OLED nazwy mogą się różnić, proszę zwrócić uwagę na kolejnośc podłączeń. Nazwy jednak nie powinny się różnić w przypadku Mikrokontrolera ESP32.</p>
+<p>Połączenia na Twojej płytce stykowej (tej białej) mogą się różnić od przedstawionych na schemacie. To normalne i zależy od zakupionego sprzętu. Ważna jest jednak zgodność nazw pinów. W przypadku kontrolera znajdującego się z tyłu wyświetlacza OLED nazwy mogą się różnić, proszę zwrócić uwagę na kolejność podłączeń. Nazwy jednak nie powinny się różnić w przypadku Mikrokontrolera ESP32.</p>
 
 ![Schemat_flip](./README/schemat_flip.png)
 
@@ -160,7 +160,7 @@ lub inną w zależności od procesu instalacyjnego (powinna kończyć się na "\
 
 8. Wklejamy jeszcze jedną ścieżkę: C:\xampp\mysql\bin
 9. Na końcu wszystkie okna można zaakceptować i zakończyć
-<p><strong>Teraz proszę zamknąć (jeśli jest otwarty) i otworzyć terminal (Ctrl + R: cmd.exe)</strong></p>
+<p><strong>Teraz proszę zamknąć (jeśli jest otwarty) i otworzyć jeszcze raz terminal (Ctrl + R: cmd.exe)</strong></p>
 
 <a name="Aplikacja"></a>
 ## Aplikacja internetowa do dodawania zadań
@@ -185,7 +185,7 @@ W odpowiednim momencie skorzystamy z okna logowania.
 3. Przenosimy do niego wszystkie pliki tak żeby tworzyły strukturę: /htdocs/restaurakcja/[tutaj będzie folder /app i inne]
 4. Kopiujemy plik do tego samego folderu: /restaurakcja/.env.example
 5. Zmieniamy nazwę na .env
-6. Edytujemy wyszukując linijki (można wykorzystać narzędzie do wyszukiwania po frazach: Ctrl + F w notatniku)<br />
+6. Edytujemy wyszukując linijki (można wykorzystać narzędzie do wyszukiwania po frazach: Ctrl + F w notatniku). Należy usunąć "#" na początku każdej edytowanej linijki jeśli taki występuje!<br />
 ```.env
 APP_NAME=Restaurakcja
 APP_URL=http://localhost/restaurakcja
@@ -197,7 +197,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 
 ```
-4. Otwieramy XAMPPa -> wyłączamy i włączamy serwer Apache przyciskiem Stop/Start
+4. Otwieramy XAMPP-a -> wyłączamy i włączamy serwer Apache przyciskiem Stop/Start
 5. Otwieramy terminal i przechodzimy do folderu z projektem: cd C:\xampp\htdocs\restaurakcja<br />
 Lokalizacja może się różnić w zależności od miejsca instalacji programu XAMPP.
 6. Wklejamy: php artisan key:generate
