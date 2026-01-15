@@ -178,6 +178,17 @@ W odpowiednim momencie skorzystamy z okna logowania.
 4. Zatwierdzamy enter-em
 5. Wpisujemy żeby zamknąć klienta MySQL: \q
 
+### Instalator API Composer
+
+Program Composer pozwala dociągać potrzebny kod, z repozytorium internetowego.<br />
+Będzie to nam potrzebne w celach synchronizacyjnych z najnowszymi wersjami kodu.
+
+1. Wchodzimy na stronę: https://getcomposer.org/download/
+2. Pobieramy instalator w najnowszej wersji.
+3. Proszę postępować zgodnie z instrukcjami.
+
+Wszystko w tym momencie już powinno działać po stronie Composera.
+
 ### Instalacja aplikacji
 
 1. Pobieramy wszystkie pliki aplikacji na komputer, znajdują się na ___githubie ***/restaurakcja***___
