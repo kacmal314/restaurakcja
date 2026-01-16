@@ -165,7 +165,7 @@ lub inną w zależności od procesu instalacyjnego (powinna kończyć się na "\
 <a name="Aplikacja"></a>
 ## Aplikacja internetowa do dodawania zadań
 
-Aplikacja będzie dostępna przez przeglądarkę internetową. W pasku url należy wpisać: localhost/restaurakcja<br />
+Aplikacja będzie dostępna przez przeglądarkę internetową. W pasku url należy wpisać: `localhost/restaurakcja/public`<br />
 W odpowiednim momencie skorzystamy z okna logowania.
 
 ### Tworzenie bazy danych
@@ -199,7 +199,7 @@ Wszystko w tym momencie już powinno działać po stronie Composera.
 6. Edytujemy wyszukując linijki (można wykorzystać narzędzie do wyszukiwania po frazach: Ctrl + F w notatniku). Należy usunąć "#" na początku każdej edytowanej linijki jeśli taki występuje!<br />
 ```.env
 APP_NAME=Restaurakcja
-APP_URL=http://localhost/restaurakcja
+APP_URL=http://localhost/restaurakcja/public
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -208,20 +208,26 @@ DB_USERNAME=root
 DB_PASSWORD=
 
 ```
-4. Otwieramy XAMPP-a -> wyłączamy i włączamy serwer Apache przyciskiem Stop/Start
-5. Otwieramy terminal i przechodzimy do folderu z projektem: cd C:\xampp\htdocs\restaurakcja<br />
+7. Otwieramy XAMPP-a -> wyłączamy i włączamy serwer Apache przyciskiem Stop/Start
+8. Otwieramy terminal i przechodzimy do folderu z projektem: `cd C:\xampp\htdocs\restaurakcja`<br />
 Lokalizacja może się różnić w zależności od miejsca instalacji programu XAMPP.
-6. Wklejamy: php artisan key:generate
-7. Teraz jeszcze: php artisan migrate:fresh --seed
+9. Wklejamy: composer install<br />
+Teraz należy poczekać. Polecenie będzie się wykonywać długo.
+10. Wklejamy: `php artisan key:generate`
+Następnie przygotowujemy bazę danych.
+11. `php artisan migrate:fresh --seed`
+Już prawie koniec, zostało stworzenie frontend-u aplikacji (wyglądu)
+12. `npm install`
+13. `npm run build`
 
 ### Generowanie klucza API
 
 <p>Klucz API to ciąg znaków, który należy skopiować i wkleić w dalszej części tutoriala</p>
 <p>Podobnie jak ma to miejsce z adresem IP naszego komputera, na którym zainstalowane są serwery</p>
 
-1. Wklejamy w przeglądarce w pasku url: localhost/restaurakcja
-2. Logujemy się podając poświadczenia: default/phpartisan
-3. Wklejamy w przeglądarce: localhost/restaurakcja/taskapi/create
+1. Wklejamy w przeglądarce w pasku url: `localhost/restaurakcja/public`
+2. Logujemy się podając poświadczenia: default@localhost/phplaravel
+3. Wklejamy w przeglądarce: `localhost/restaurakcja/public/api/tokens/create`
 4. Zapisujemy na kartce papieru TOKEN DOSTĘPU, będzie potrzebny później
 
 <a name="Wgrywanie"></a>
